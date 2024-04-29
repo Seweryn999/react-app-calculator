@@ -1,4 +1,4 @@
-import React from "react"; // Dodanie importu React
+import React from "react";
 
 import "./styles.css";
 
@@ -12,6 +12,7 @@ function App() {
       <div>
         <button className="span-two">AC</button>
         <button>DEL</button>
+        <button>÷</button>
         <button>1</button>
         <button>2</button>
         <button>3</button>
@@ -21,7 +22,7 @@ function App() {
         <button>6</button>
         <button>+</button>
         <button>7</button>
-        <button>8</button> {/* Poprawiony przycisk 8 */}
+        <button>8</button>
         <button>9</button>
         <button>-</button>
         <button>.</button>
