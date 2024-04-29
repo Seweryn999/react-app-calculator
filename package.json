@@ -1,23 +1,11 @@
 {
-  "name": "calculator",
-  "version": "0.1.0",
+  "name": "parcel-project-template",
+  "version": "2.0.0",
   "description": "",
   "homepage": "https://seweryn999.github.io/react-app-calculator",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "parcel build src/*.html --public-url /react-app-calculator/",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /react-app-calculator/"
   },
   "eslintConfig": {
     "extends": [
