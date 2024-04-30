@@ -1,6 +1,6 @@
-import { useReducer } from "react";
-import DigitButton from "./DigitButton";
-import OperationButton from "./OperationButton";
+import React, { useReducer } from "react";
+import DigitButton from "./DigitButton.jsx";
+import OperationButton from "./OperationButton.jsx";
 import "./styles.css";
 
 export const ACTIONS = {
@@ -94,6 +94,8 @@ function reducer(state, { type, payload }) {
         operation: null,
         currentOperand: evaluate(state),
       };
+    default:
+      return state;
   }
 }
 
@@ -115,6 +117,8 @@ function evaluate({ currentOperand, previousOperand, operation }) {
     case "÷":
       computation = prev / current;
       break;
+    default:
+      return "";
   }
 
   return computation.toString();
@@ -124,7 +128,7 @@ const INTEGER_FORMATTER = new Intl.NumberFormat("en-us", {
   maximumFractionDigits: 0,
 });
 function formatOperand(operand) {
-  if (operand == null) return;
+  if (operand == null) return "";
   const [integer, decimal] = operand.split(".");
   if (decimal == null) return INTEGER_FORMATTER.format(integer);
   return `${INTEGER_FORMATTER.format(integer)}.${decimal}`;
